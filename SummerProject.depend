@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1561175205 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
+	<iostream>
+	<C:\Users\Loc_PC\Documents\CodeBlocks\project\Learning\SummerProject\deck.h>
+
+1561175206 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\deck.cpp
+	<C:\Users\Loc_PC\Documents\CodeBlocks\project\Learning\SummerProject\deck.h>
+

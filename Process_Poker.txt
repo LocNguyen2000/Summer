@@ -1,0 +1,8 @@
+// TEST POKER
+1 Tao Deck
+2 Viet ham:
+- Chia bai cho n nguoi 
+- Viet ham danh gia winner  
+
+...
+Cuoi : Animation
