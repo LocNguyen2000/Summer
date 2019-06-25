@@ -1,8 +1,27 @@
 # depslib dependency file v1.0
-1561175205 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
+1561435524 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
 	<iostream>
-	<C:\Users\Loc_PC\Documents\CodeBlocks\project\Learning\SummerProject\deck.h>
+	"deck.h"
+	"players.h"
 
-1561175206 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\deck.cpp
-	<C:\Users\Loc_PC\Documents\CodeBlocks\project\Learning\SummerProject\deck.h>
+1561429644 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\deck.cpp
+	"deck.h"
+
+1561431722 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\deck.h
+	<vector>
+	<string>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+	<iostream>
+
+1561431504 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.cpp
+	"players.h"
+	"winner.h"
+
+1561436963 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.h
+	"deck.h"
+
+1561435512 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\winner.h
+	"deck.h"
 

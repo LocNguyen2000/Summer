@@ -32,9 +32,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="deck.cpp" />
-		<Unit filename="deck.h">
-			<Option link="1" />
-		</Unit>
+		<Unit filename="deck.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

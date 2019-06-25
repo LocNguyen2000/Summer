@@ -17,18 +17,21 @@ struct Cards{
         Number = Number_;
         Suits = Suits_;
     }
-    void printCard()
+    void ShowCards()
     {
         cout << Number << " of " << Suits << endl;
-
+    }
+    void HideCards()
+    {
+        cout << " ***** " << endl;
     }
 };
 class Deck{
 public:
     Deck();
     ~Deck();
-    vector<Cards>Order;
-    vector<int> Shuffle_Cards();
+    vector<Cards>NewDeck;
+    vector<int>Shuffle_Cards();
 };
 
 #endif // DECK_H

@@ -1,5 +1,4 @@
-#include <C:\Users\Loc_PC\Documents\CodeBlocks\project\Learning\SummerProject\deck.h>
-
+#include "deck.h"
 using namespace std;
 
 Deck::Deck()
@@ -15,10 +14,10 @@ Deck::Deck()
         Cards card_3(i, d);
         Cards card_4(i, h);
         // cho vao deck
-        Order.push_back(card_1);
-        Order.push_back(card_2);
-        Order.push_back(card_3);
-        Order.push_back(card_4);
+        NewDeck.push_back(card_1);
+        NewDeck.push_back(card_2);
+        NewDeck.push_back(card_3);
+        NewDeck.push_back(card_4);
     }
 }
 Deck::~Deck()
@@ -37,5 +36,4 @@ vector<int> Deck::Shuffle_Cards()
     }
     return nums;
 }
-
-
+//*____________________________________
