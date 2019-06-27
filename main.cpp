@@ -4,14 +4,12 @@
 
 using namespace std;
 
-int main(int *argc, int argv[])
+int main(int argc, char* argv[])
 {
     srand(time(0));
     Deck decks;
     vector<int> rand_card = decks.Shuffle_Cards();
-//    for (int i = 0; i < rand_card.size(); i++){
-//        int o = rand_card[i];
-//    }
+
     int n;
     cout << " Number of players " << endl;
     cin >> n;
@@ -29,9 +27,10 @@ int main(int *argc, int argv[])
         current_cards_pos++;
     }
     for (int i = 0; i < n; i++){
-        cout << "PLAYER " << i << " CARDS " << endl;
+        cout << "PLAYER " << i + 1 << "'S CARDS "  << endl;
         for (int j = 0 ; j < 2; j++){
             player[i].hands[j].ShowCards();
+            player[i].EvaluateCards(board);
         }
         cout << "______________________" << endl;
     }
@@ -40,4 +39,8 @@ int main(int *argc, int argv[])
         board[i].ShowCards();
     }
     cout << "___________________" <<endl;
+
+
 }
+
+

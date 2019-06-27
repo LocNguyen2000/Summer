@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1561435524 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
+1561628666 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
 	<iostream>
 	"deck.h"
 	"players.h"
@@ -15,13 +15,13 @@
 	<algorithm>
 	<iostream>
 
-1561431504 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.cpp
+1561629015 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.cpp
 	"players.h"
 	"winner.h"
 
-1561436963 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.h
+1561444868 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.h
 	"deck.h"
 
-1561435512 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\winner.h
+1561628484 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\winner.h
 	"deck.h"
 

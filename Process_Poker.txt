@@ -1,13 +1,8 @@
 // TEST POKER
 1 Tao Deck
-
 2 Viet ham:
 - Chia bai cho n nguoi 
 - Viet ham danh gia winner  
-- chia cac truong hop trong poker
-
-3 Process Dat Cuoc
-- Viet ham check, raise, fold,..
 
 ...
 Cuoi : Animation

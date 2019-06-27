@@ -11,8 +11,6 @@ public:
     void TakeCards(Cards cc); // Nhan bai tren tay
     bool AskPeek(); // hoi de xem bai
     int EvaluateCards(vector<Cards> TableCard);
-
-
 };
 
 #endif // PLAYERS_H

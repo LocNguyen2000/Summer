@@ -4,7 +4,6 @@
 Players::Players()
 {}
 
-
 Players::~Players()
 {}
 
@@ -34,5 +33,16 @@ int Players::EvaluateCards(vector<Cards>TableCards)
     for (int i = 0; i < 5; i++){
         TotalHands.push_back(TableCards[i]);
     }
+    int comparedValue;
+    int recPoint = Point_Is_Straight(TotalHands, comparedValue);
+    final_point = recPoint;
+    recPoint = Point_Is_Flush(TotalHands);
+    if( recPoint > final_point)
+        final_point = recPoint;
+    recPoint = Point_Is_Sets(TotalHands);
+    if (recPoint > final_point)
+        final_point = recPoint;
+        AnouncePrize(final_point);
+    return final_point;
 
 };

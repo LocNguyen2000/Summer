@@ -78,5 +78,99 @@ int Point_Is_Flush(vector<Cards>wholeCard)
     }
     return point;
 }
-int
+
+int Point_Is_Sets(vector<Cards>wholeCard)
+{
+    int point = 0;
+    vector<int> wholeValue; // mang de luu gia tri cua bai;
+    for(int i = 0; i < wholeCard.size(); i++)
+    {
+        wholeValue.push_back(wholeCard[i].Number);
+    }
+    int counter;
+    sort(wholeValue.begin(), wholeValue.end() );
+    int currentPos = 0; // vi tri kiem tra dem;
+    int numPair = 0;
+    bool TOK = false , FH = false, FOK = false;
+    while ( currentPos < wholeValue.size())
+    {
+        counter = count(wholeValue.begin(), wholeValue.end(), wholeValue[currentPos]);
+        currentPos+= counter;
+        if (counter == 2) numPair += 1;
+        else if(counter == 3) TOK = true;
+        else if(counter == 4)
+        {
+            FOK = true;
+            break;
+        }
+    }
+
+    if (FOK == true) point = 7;
+    else
+    {
+        if(TOK == true)
+        {
+            if(numPair > 0)
+            {
+                point = 6;
+            }
+            else point = 3;
+        }
+        if (numPair == 2) point = 2;
+        else if (numPair == 1) point = 1;
+    }
+    return point;
+}
+
+void AnouncePrize(int final_point)
+{
+    switch(final_point)
+    {
+        case 0:
+        {
+            cout << " ==> High Cards" << endl;
+            break;
+        }
+        case 1:
+        {
+            cout << " ==> One Pair" << endl;
+            break;
+        }
+        case 2:
+        {
+            cout << " ==> Two Pairs " << endl;
+            break;
+        }
+        case 3:
+        {
+            cout << " ==> Three Of A Kind " << endl;
+            break;
+        }
+        case 4:
+        {
+            cout << " ==> Straight " << endl;
+            break;
+        }
+        case 5:
+            {
+                cout << " ==> Flush " << endl;
+                break;
+            }
+            case 6:
+            {
+                cout << " ==> Full House " << endl;
+                break;
+            }
+            case 7:
+            {
+                cout << " ==> Four Of A Kind " << endl;
+                break;
+            }
+            case 8:
+            {
+                cout << " ==> Straight Flush " << endl;
+                break;
+            }
+        }
+}
 #endif // WINNER_H
