@@ -26,16 +26,19 @@ int main(int argc, char* argv[])
         board.push_back(decks.NewDeck[rand_card[current_cards_pos]]);
         current_cards_pos++;
     }
+    int playerP;
     for (int i = 0; i < n; i++){
         cout << "PLAYER " << i + 1 << "'S CARDS "  << endl;
         for (int j = 0 ; j < 2; j++){
             player[i].hands[j].ShowCards();
-            player[i].EvaluateCards(board);
+            playerP = player[i].EvaluateCards(board);
         }
+        cout << "Player " << i + 1 << " Point: " << playerP << endl;
         cout << "______________________" << endl;
+
     }
     cout << "BOARD CARDS" << endl;
-    for (int i = 0 ; i < 5; i++){
+    for (int i = 0 ; i < board.size(); i++){
         board[i].ShowCards();
     }
     cout << "___________________" <<endl;

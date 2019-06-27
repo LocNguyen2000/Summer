@@ -13,11 +13,11 @@ int Point_Is_Straight(vector<Cards>wholeCard, int &straightP)
     }
     sort(value.begin(), value.end());
     int combo = 0;
-    for (int i = value.size(); i > 0  ; i--){
+    for (int i = value.size() - 1; i > 0  ; i--){
         if (combo != 4)
         {
             if (value[i] - value[i-1] == 1) combo++;
-            else combo = 0;
+            else if (value[i] - value[i-1] != 0) combo = 0;
         }
         else {
             straightP = value[i];
@@ -116,7 +116,7 @@ int Point_Is_Sets(vector<Cards>wholeCard)
             }
             else point = 3;
         }
-        if (numPair == 2) point = 2;
+        else if (numPair >= 2) point = 2;
         else if (numPair == 1) point = 1;
     }
     return point;
@@ -152,25 +152,25 @@ void AnouncePrize(int final_point)
             break;
         }
         case 5:
-            {
-                cout << " ==> Flush " << endl;
-                break;
-            }
-            case 6:
-            {
-                cout << " ==> Full House " << endl;
-                break;
-            }
-            case 7:
-            {
-                cout << " ==> Four Of A Kind " << endl;
-                break;
-            }
-            case 8:
-            {
-                cout << " ==> Straight Flush " << endl;
-                break;
-            }
+        {
+            cout << " ==> Flush " << endl;
+            break;
         }
+        case 6:
+        {
+            cout << " ==> Full House " << endl;
+            break;
+        }
+        case 7:
+        {
+            cout << " ==> Four Of A Kind " << endl;
+            break;
+        }
+        case 8:
+        {
+            cout << " ==> Straight Flush " << endl;
+            break;
+        }
+    }
 }
 #endif // WINNER_H

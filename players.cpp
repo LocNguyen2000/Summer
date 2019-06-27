@@ -24,7 +24,6 @@ bool Players::AskPeek()
 
 int Players::EvaluateCards(vector<Cards>TableCards)
 {
-    int prev_points = 0;
     int final_point = 0;
     vector<Cards>TotalHands;
     for (int i = 0; i < 2; i++){
@@ -44,5 +43,4 @@ int Players::EvaluateCards(vector<Cards>TableCards)
         final_point = recPoint;
         AnouncePrize(final_point);
     return final_point;
-
 };
