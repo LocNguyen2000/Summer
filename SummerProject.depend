@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1561648375 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
+1561628666 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\main.cpp
 	<iostream>
 	"deck.h"
 	"players.h"
@@ -15,13 +15,109 @@
 	<algorithm>
 	<iostream>
 
-1561653150 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.cpp
+1561629015 source:c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.cpp
 	"players.h"
 	"winner.h"
 
 1561444868 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\players.h
 	"deck.h"
 
-1561647576 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\winner.h
+1561628484 c:\users\loc_pc\documents\codeblocks\project\learning\summerproject\winner.h
 	"deck.h"
+
+1561648165 source:e:\it\summer-master\summer-master\deck.cpp
+	"deck.h"
+
+1561629314 e:\it\summer-master\summer-master\deck.h
+	<vector>
+	<string>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+	<iostream>
+
+1561648863 source:e:\it\summer-master\summer-master\main.cpp
+	<iostream>
+	"deck.h"
+	"players.h"
+
+1561647660 e:\it\summer-master\summer-master\players.h
+	"deck.h"
+
+1561648863 source:e:\it\summer-master\summer-master\players.cpp
+	"players.h"
+	"winner.h"
+
+1561649240 e:\it\summer-master\summer-master\winner.h
+	"deck.h"
+
+1561648165 source:e:\it\summer-master\summergame\deck.cpp
+	"deck.h"
+
+1561737184 e:\it\summer-master\summergame\deck.h
+	<vector>
+	<string>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+	<iostream>
+	<set>
+
+1561735986 source:e:\it\summer-master\summergame\main.cpp
+	<iostream>
+	"deck.h"
+	"players.h"
+	"winner.h"
+
+1561735804 e:\it\summer-master\summergame\players.h
+	"deck.h"
+	"winner.h"
+
+1561741709 source:e:\it\summer-master\summergame\players.cpp
+	"players.h"
+
+1561741709 e:\it\summer-master\summergame\winner.h
+	"players.h"
+	"deck.h"
+
+1561742127 source:e:\it\summer-master\summergame\winner.cpp
+	"winner.h"
+
+1561742925 source:e:\game\poker\summerproject-master\deck.cpp
+	"deck.h"
+
+1563762371 e:\game\poker\summerproject-master\deck.h
+	<vector>
+	<string>
+	<ctime>
+	<cstdlib>
+	<algorithm>
+	<iostream>
+	<set>
+
+1563892270 source:e:\game\poker\summerproject-master\main.cpp
+	<iostream>
+	"deck.h"
+	"players.h"
+	"winner.h"
+	"commonFunction.h"
+
+1563766046 e:\game\poker\summerproject-master\players.h
+	"deck.h"
+	"winner.h"
+
+1561742925 e:\game\poker\summerproject-master\winner.h
+	"players.h"
+	"deck.h"
+
+1563766040 source:e:\game\poker\summerproject-master\players.cpp
+	"players.h"
+
+1563760982 source:e:\game\poker\summerproject-master\winner.cpp
+	"winner.h"
+
+1564081313 e:\game\poker\summerproject-master\commonfunction.h
+	"deck.h"
+	"players.h"
+	"winner.h"
 
