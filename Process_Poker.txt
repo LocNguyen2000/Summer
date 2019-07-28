@@ -3,6 +3,11 @@
 2 Viet ham:
 - Chia bai cho n nguoi 
 - Viet ham danh gia winner  
+- Chia cac truong hop dac biet khi xet nguoi chien thang
+- Cho moi nguoi co 1 turn va tat ca HideCards
+  + Trong do co ham (ShowCards)
+  + ... Bet(Continue)
+
 
 ...
 Cuoi : Animation
