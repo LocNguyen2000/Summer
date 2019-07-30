@@ -3,10 +3,29 @@
 #include "winner.h"
 
 int dealer, small_blind, big_blind;
+int SmallBlindMoney = 10;
+int mBet = 0; // m == min;
+int MoneyInPot = 0;
+
 
 namespace Cf{
+    bool MoneyBettingHandler(vector<Players> p, int minBet){
+        bool result = true;
+        for (int i = 0; i < p.size(); i++){
+            if((p[i].bet == true) && (p[i].TotalPlayerMoney > 0) ){
+                if (p[i].betMoney != minBet){
+                    result = false;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
 
-    void SetBlind(int d, int num_player){
+    void SetAll(int &d, int num_player){
+        if(d > num_player){
+            d -= num_player;
+        }
         small_blind = d + 1;
         big_blind = d + 2;
         if (small_blind > num_player){

@@ -16,8 +16,6 @@ int Point_Is_Sets(vector<Cards>wholeCard, int &point1, int &point2);
 
 void AnouncePrize(int final_point);
 
-
-
 }
 
 #endif // WINNER_H

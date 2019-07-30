@@ -26,28 +26,16 @@ int main(int argc, char* argv[])
             current_cards_pos++;
         }
     }
+
+    dealer = 0;
+    SetAll(dealer, n);
+
     for (int i = 0; i < 5; i++){
         board.push_back(decks.NewDeck[rand_card[current_cards_pos]]);
         current_cards_pos++;
     }
     for (int bet_turn = 1; bet_turn <= 4; bet_turn++){
-        switch (bet_turn){
 
-            case 2:{
-                for (int i = 0; i < 3; i++){
-                    board[i].Show = true;
-                }
-                break;
-            }
-            case 3:{
-                board[3].Show = true;
-                break;
-            }
-            case 4:{
-                board[4].Show = true;
-                break;
-            }
-        }
         clearScreen();
         PrintCard(player, board);
         for (int i = 0; i < n; i++){
@@ -66,6 +54,67 @@ int main(int argc, char* argv[])
                 clearScreen();
                 PrintCard(player, board);
             }
+
+        }
+
+        switch (bet_turn){
+
+            case 1:
+            {
+                player[small_blind].SetBet(SmallBlindMoney, MoneyInPot);
+                player[big_blind].SetBet(2*SmallBlindMoney, MoneyInPot);
+                mBet = 2*SmallBlindMoney;
+                cout << mBet << endl;
+                while(MoneyBettingHandler(player, mBet) != true)
+                {
+                    int recPos = big_blind + 1;   // recPos = recent position
+                    for(int i = 1; i <= n; i++)
+                    {
+                        if(recPos > n) recPos -= n;
+                        cout << "PLAYER " << recPos << endl;
+                        player[recPos].BettingProcess(mBet, MoneyInPot);
+                        recPos += 1;
+                    }
+                }
+                break;
+            }
+            case 2:{
+                for (int i = 0; i < 3; i++){
+                    board[i].Show = true;
+                }
+                for(int i = 1; i <= n; i++)
+                    {
+                        int recPos = small_blind; // recPos = recent position
+                        if(recPos > n) recPos -= n;
+                        cout << "PLAYER " << recPos << endl;
+                        player[recPos].BettingProcess(mBet, MoneyInPot);
+                        recPos += 1;
+                    }
+
+                break;
+            }
+            case 3:{
+                board[3].Show = true;
+                for(int i = 1; i <= n; i++)
+                    {
+                        int recPos = small_blind; // recPos = recent position
+                        if(recPos > n) recPos -= n;
+                        player[recPos].BettingProcess(mBet, MoneyInPot);
+                        recPos += 1;
+                    }
+                break;
+            }
+            case 4:{
+                board[4].Show = true;
+                for(int i = 1; i <= n; i++)
+                    {
+                        int recPos = small_blind; // recPos = recent position
+                        if(recPos > n) recPos -= n;
+                        player[recPos].BettingProcess(mBet, MoneyInPot);
+                        recPos += 1;
+                    }
+                break;
+            }
         }
     }
 
@@ -81,13 +130,13 @@ int main(int argc, char* argv[])
     cout << "SHOW DOWN" << endl;
     PrintCard(player, board);
 
-     for (int num = 0; num < n; num++){
+    for (int num = 0; num < n; num++){
 
         cout << "PLAYER " << num+1 << endl;
         AnouncePrize(player[num].mainPoint);
     }
 
-    DetermineWinner(player);
+    DetermineWinner(player, MoneyInPot);
 
 
     /*_______________________________________________
